@@ -1,0 +1,20 @@
+.container {
+    width: 30%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-left: 500px;
+    margin-top: 50px;
+
+    border: 1px solid #1f53c5;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+
+
+}
+
+body {
+    background-image: url('fondo.jpg');
+  }

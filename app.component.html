@@ -1,0 +1,53 @@
+<div class="container">
+  <!-- Se asigna una clase contenedor, la cual permite conrtolar 
+    todas las variable en el interior como un solo objeto -->
+<h1>{{title}}</h1> 
+<!-- Se llama la variable title almacenada en el modelo -->
+
+<!-- Se procede a crear el formulario de la calculadora -->
+<form>
+  Ingrese el valor a depositar: <br/><br/>$ 
+  <input type="number" [(ngModel)]="v_actual" name="v_actual" ><br/><br/>
+  <!-- Se crea una variable de tipo numero, 
+    en donde se solicita ingresar el valor del deposito-->
+  <!-- El comando ngModel permite almacenar en el modelo la variable ingresada -->
+  <!-- Se asigna un nombre el cual permite almacenar el valor 
+    ingresado en la misma variable asignada en el modelo-->
+
+  Ingrese la cantidad de meses de inversión: <br/><br/>
+  <input type="number" [(ngModel)]="m_inversion" name="m_inversion"><br/><br/>
+    <!-- Se crea una variable de tipo numero, 
+      en donde se solicita ingresar la cantidad de meses de inversión-->
+  <!-- El comando ngModel permite almacenar en el modelo la variable ingresada -->
+  <!-- Se asigna un nombre el cual permite almacenar el valor 
+    ingresado en la misma variable asignada en el modelo-->
+  <input type="submit" value="Calcular" (click)="Calcular()">
+  <!-- Se crea un botón el cual envia 
+    la información del formulario al modelo-->
+  <!-- Se llama el metodo calcular, para que modifique los datos ingresados-->
+  <input type="submit" value="Regristro" (click)="Registro()">
+  <!-- Se crea un botón el cual envia 
+    la información del formulario al modelo-->
+  <!-- Se llama el metodo registro, para que almacene 
+    en el arreglo los datos ingresados-->
+
+
+</form>
+
+<p>Las ganancias de su inversión generadas son: $ {{resultado}}</p>
+<!-- Se crea un espacio en donde se mostrara 
+  el resultado obtenido del metodo Calcular -->
+
+<p>Valor del deposito: <br/><br/> $ {{b[0]}}
+<!-- Se crea un espacio en donde se mostrara 
+  el valor del deposito registrado, el cual corresponde a la posición 0 
+  de nuestro arreglo "b" -->
+<p>Meses de interes: <br/><br/> {{b[1]}}
+<!-- Se crea un espacio en donde se mostrara 
+  el valor de los meses de interes registrado, el cual corresponde a la posición 1 
+  de nuestro arreglo "b" -->
+<p>Ganancias Totales: <br/><br/> $ {{b[2]}}
+<!-- Se crea un espacio en donde se mostrara 
+  el valor del resultado del metodo "Calcular", el cual corresponde a la posición 2 
+  de nuestro arreglo "b" -->
+</div>
